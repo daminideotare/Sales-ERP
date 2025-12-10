@@ -188,7 +188,7 @@ let barChart = null;
 // ============================
 async function loadProjects() {
   try {
-    const res = await fetch("http://localhost:9090/projects/all");
+    const res = await fetch("https://sales-erp-production.up.railway.app/projects/all");
     const data = await res.json();
 
     allProjects = data;
