@@ -9,7 +9,7 @@ let sourceChart = null;
 let conversionChart = null;
 
 // Backend Base URL
-const BASE = "http://localhost:9090/leads";
+const BASE = "https://sales-erp-production.up.railway.app/leads";
 
 // Utility: safe chart destroy
 function safeDestroy(chart) {
