@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = { projectId, itTeam, startDate, endDate };
 
-      const response = await fetch("https://sales-erp-production.up.railway.app/api/allocations", {
+      const response = await fetch("https://sales-erp-production-c47d.up.railway.app/api/allocations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
