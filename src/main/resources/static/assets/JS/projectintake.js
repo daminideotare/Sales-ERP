@@ -89,7 +89,7 @@ async function runFilterAndApply() {
   // First attempt: server-side filter
   if (qs) {
     try {
-      const url = `https://sales-erp-production.up.railway.app/projects/filter${qs ? `?${qs}` : ""}`;
+      const url = `https://sales-erp-production-c47d.up.railway.app/projects/filter${qs ? `?${qs}` : ""}`;
       console.log("[Filters] Requesting filtered projects from", url);
       const res = await fetch(url);
       if (res.ok) {
@@ -188,7 +188,7 @@ let barChart = null;
 // ============================
 async function loadProjects() {
   try {
-    const res = await fetch("https://sales-erp-production.up.railway.app/projects/all");
+    const res = await fetch("https://sales-erp-production-c47d.up.railway.app/projects/all");
     const data = await res.json();
 
     allProjects = data;
@@ -232,10 +232,10 @@ function renderProjectTable(data) {
 async function loadAllCharts() {
   try {
     const [typeRes, statusRes, clientRes, overtimeRes] = await Promise.all([
-      fetch("https://sales-erp-production.up.railway.app/projects/group-by-type").then(r => r.json()),
-      fetch("https://sales-erp-production.up.railway.app/projects/group-by-status").then(r => r.json()),
-      fetch("https://sales-erp-production.up.railway.app/projects/group-by-client").then(r => r.json()),
-      fetch("https://sales-erp-production.up.railway.app/projects/over-time").then(r => r.json())
+      fetch("https://sales-erp-production-c47d.up.railway.app/projects/group-by-type").then(r => r.json()),
+      fetch("https://sales-erp-production-c47d.up.railway.app/projects/group-by-status").then(r => r.json()),
+      fetch("https://sales-erp-production-c47d.up.railway.app/projects/group-by-client").then(r => r.json()),
+      fetch("https://sales-erp-production-c47d.up.railway.app/projects/over-time").then(r => r.json())
     ]);
 
     renderCharts(overtimeRes);
